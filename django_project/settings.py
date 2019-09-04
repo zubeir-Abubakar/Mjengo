@@ -29,7 +29,7 @@ SECRET_KEY = config('SECRET_KEY')
 MODE = config("MODE", default="dev")
 DEBUG = config('DEBUG', default=False, cast=bool)
 
-ALLOWED_HOSTS = [*]
+ALLOWED_HOSTS = config('ALLOWED_HOSTS', cast=Csv())
 
 # email settings
 # EMAIL_USE_TLS = config('EMAIL_USE_TLS')
